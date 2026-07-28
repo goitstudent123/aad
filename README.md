@@ -1,2 +1,0 @@
-# aad
-Autononomous Agent Design
