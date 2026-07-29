@@ -1,0 +1,352 @@
+[
+  {
+    "id": "6d38f74dbeae5470ef66f4d2455b0bae",
+    "projectId": "nexora-helpdesk",
+    "name": "",
+    "timestamp": "2026-07-29T12:38:44.821Z",
+    "environment": "default",
+    "tags": [],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": null,
+    "sessionId": null,
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {},
+    "createdAt": "2026-07-29T12:38:49.437Z",
+    "updatedAt": "2026-07-29T12:38:49.519Z",
+    "externalId": null,
+    "scores": [],
+    "latency": 23.341,
+    "observations": [
+      {
+        "name": "PydanticToolsParser",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:39:08.158Z",
+        "endTime": "2026-07-29T12:39:08.159Z",
+        "usage": {},
+        "input": "{'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 124, 'prompt_tokens': 1304, 'total_tokens': 1428, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens",
+        "output": "{'next': 'FINISH', 'reason': 'Користувач отримав усю необхідну інформацію: хто такий E1002 (Ігор Дідух, диспетчер логістики), його відкриті заявки (T-2044 — ноутбук не бачить док-станцію) та статус MFA (вимкнена). Додаткових дій не потрібно.'}"
+      },
+      {
+        "name": "supervisor",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:39:03.756Z",
+        "endTime": "2026-07-29T12:39:08.161Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "{'route': 'FINISH', 'handoffs': []}"
+      },
+      {
+        "name": "<unknown>",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:39:08.161Z",
+        "endTime": "2026-07-29T12:39:08.161Z",
+        "usage": {},
+        "input": "{'route': 'FINISH', 'handoffs': ['directory_agent'], 'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additiona",
+        "output": "respond"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:39:03.757Z",
+        "endTime": "2026-07-29T12:39:08.159Z",
+        "usage": {},
+        "input": "[{'content': \"Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи координатор. Обирай, який агент працює наступним, або FINISH, коли даних достатньо.\\n\\n- kb_agent — інструкції та політики з бази знань (search_kb)\\n- directory_ag",
+        "output": "{'next': 'FINISH', 'reason': 'Користувач отримав усю необхідну інформацію: хто такий E1002 (Ігор Дідух, диспетчер логістики), його відкриті заявки (T-2044 — ноутбук не бачить док-станцію) та статус MFA (вимкнена). Додаткових дій не потрібно.'}"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T12:39:03.758Z",
+        "endTime": "2026-07-29T12:39:08.157Z",
+        "usage": {
+          "input": 1304,
+          "output": 124,
+          "total": 1428,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 0
+        },
+        "input": "[{'role': 'system', 'content': \"Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи координатор. Обирай, який агент працює наступним, або FINISH, коли даних достатньо.\\n\\n- kb_agent — інструкції та політики з бази знань (search_k",
+        "output": "{'role': 'assistant', 'content': '', 'tool_calls': [{'name': 'Routing', 'args': {'next': 'FINISH', 'reason': 'Користувач отримав усю необхідну інформацію: хто такий E1002 (Ігор Дідух, диспетчер логістики), його відкриті заявки (T-2044 — ноутбук не бачить док-станцію) та статус MFA (вимкнена). Додатк"
+      },
+      {
+        "name": "agent",
+        "type": "AGENT",
+        "startTime": "2026-07-29T12:38:52.657Z",
+        "endTime": "2026-07-29T12:39:03.750Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "{'messages': [{'content': 'Ось інформація про співробітника **E1002**:\\n\\n---\\n\\n### 👤 Ігор Дідух\\n| Поле | Значення |\\n|---|---|\\n| **Посада** | Диспетчер |\\n| **Відділ** | Логістика |\\n| **Email** | ihor.didukh@nexora.ua |\\n| **Телефон** | +380 (50) 987-65-43 |\\n| **Керівник** | E1003 |\\n| **Прист"
+      },
+      {
+        "name": "directory_agent",
+        "type": "AGENT",
+        "startTime": "2026-07-29T12:38:46.796Z",
+        "endTime": "2026-07-29T12:39:03.756Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'route': 'directory_agent', 'handoffs': ['directory_agent'], 'blocked': None,",
+        "output": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {"
+      },
+      {
+        "name": "should_continue",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:39:03.747Z",
+        "endTime": "2026-07-29T12:39:03.749Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "__end__"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T12:38:52.660Z",
+        "endTime": "2026-07-29T12:39:03.745Z",
+        "usage": {
+          "input": 815,
+          "output": 329,
+          "total": 1300,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 156
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи агент каталогу. Знаходь картку співробітника (lookup_employee) та його заявки\\n(list_tickets). Табельний номер має формат E1001. Не пропонуй незв",
+        "output": "{'role': 'assistant', 'content': 'Ось інформація про співробітника **E1002**:\\n\\n---\\n\\n### 👤 Ігор Дідух\\n| Поле | Значення |\\n|---|---|\\n| **Посада** | Диспетчер |\\n| **Відділ** | Логістика |\\n| **Email** | ihor.didukh@nexora.ua |\\n| **Телефон** | +380 (50) 987-65-43 |\\n| **Керівник** | E1003 |\\n| "
+      },
+      {
+        "name": "directory_agent",
+        "type": "AGENT",
+        "startTime": "2026-07-29T12:38:46.797Z",
+        "endTime": "2026-07-29T12:39:03.755Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'route': 'directory_agent', 'handoffs': ['directory_agent'], 'blocked': None,",
+        "output": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:52.658Z",
+        "endTime": "2026-07-29T12:39:03.746Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "{'content': 'Ось інформація про співробітника **E1002**:\\n\\n---\\n\\n### 👤 Ігор Дідух\\n| Поле | Значення |\\n|---|---|\\n| **Посада** | Диспетчер |\\n| **Відділ** | Логістика |\\n| **Email** | ihor.didukh@nexora.ua |\\n| **Телефон** | +380 (50) 987-65-43 |\\n| **Керівник** | E1003 |\\n| **Пристрої** | Ноутбу"
+      },
+      {
+        "name": "call_model",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:52.658Z",
+        "endTime": "2026-07-29T12:39:03.747Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "{'messages': [{'content': 'Ось інформація про співробітника **E1002**:\\n\\n---\\n\\n### 👤 Ігор Дідух\\n| Поле | Значення |\\n|---|---|\\n| **Посада** | Диспетчер |\\n| **Відділ** | Логістика |\\n| **Email** | ihor.didukh@nexora.ua |\\n| **Телефон** | +380 (50) 987-65-43 |\\n| **Керівник** | E1003 |\\n| **Прист"
+      },
+      {
+        "name": "lookup_employee",
+        "type": "TOOL",
+        "startTime": "2026-07-29T12:38:51.866Z",
+        "endTime": "2026-07-29T12:38:52.656Z",
+        "usage": {},
+        "input": "{'employee_id': 'E1002'}",
+        "output": "{'content': [{'type': 'text', 'text': '{\"employee_id\":\"E1002\",\"name\":\"Ігор Дідух\",\"email\":\"ihor.didukh@nexora.ua\",\"phone\":\"+380 (50) 987-65-43\",\"department\":\"Логістика\",\"role\":\"Диспетчер\",\"manager_id\":\"E1003\",\"devices\":[\"NB-2210\",\"PH-0031\"],\"mfa_enabled\":false,\"account_locked\":false}', 'id': 'lc_238"
+      },
+      {
+        "name": "list_tickets",
+        "type": "TOOL",
+        "startTime": "2026-07-29T12:38:51.866Z",
+        "endTime": "2026-07-29T12:38:52.654Z",
+        "usage": {},
+        "input": "{'employee_id': 'E1002', 'status': 'open'}",
+        "output": "{'content': [{'type': 'text', 'text': '[{\"ticket_id\":\"T-2044\",\"employee_id\":\"E1002\",\"status\":\"open\",\"category\":\"hardware\",\"summary\":\"Ноутбук NB-2210 не бачить док-станцію\",\"opened\":\"2026-07-28\"}]', 'id': 'lc_ed0e91e3-9638-4502-a217-1777f0502567'}], 'additional_kwargs': {}, 'response_metadata': {}, '"
+      },
+      {
+        "name": "lookup_employee",
+        "type": "TOOL",
+        "startTime": "2026-07-29T12:38:51.867Z",
+        "endTime": "2026-07-29T12:38:52.656Z",
+        "usage": {},
+        "input": "{'employee_id': 'E1002'}",
+        "output": "[{'type': 'text', 'text': '{\"employee_id\":\"E1002\",\"name\":\"Ігор Дідух\",\"email\":\"ihor.didukh@nexora.ua\",\"phone\":\"+380 (50) 987-65-43\",\"department\":\"Логістика\",\"role\":\"Диспетчер\",\"manager_id\":\"E1003\",\"devices\":[\"NB-2210\",\"PH-0031\"],\"mfa_enabled\":false,\"account_locked\":false}', 'id': 'lc_238b7fab-3ea9-4"
+      },
+      {
+        "name": "Prompt",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:52.659Z",
+        "endTime": "2026-07-29T12:38:52.659Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "[{'content': 'Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи агент каталогу. Знаходь картку співробітника (lookup_employee) та його заявки\\n(list_tickets). Табельний номер має формат E1001. Не пропонуй незворотних дій.', 'ad"
+      },
+      {
+        "name": "tools",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:51.865Z",
+        "endTime": "2026-07-29T12:38:52.657Z",
+        "usage": {},
+        "input": "{'__type': 'tool_call_with_context', 'tool_call': {'name': 'lookup_employee', 'args': {'employee_id': 'E1002'}, 'id': 'call_205b443a5286447fbac46718', 'type': 'tool_call'}, 'state': {'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {},",
+        "output": "{'messages': [{'content': [{'type': 'text', 'text': '{\"employee_id\":\"E1002\",\"name\":\"Ігор Дідух\",\"email\":\"ihor.didukh@nexora.ua\",\"phone\":\"+380 (50) 987-65-43\",\"department\":\"Логістика\",\"role\":\"Диспетчер\",\"manager_id\":\"E1003\",\"devices\":[\"NB-2210\",\"PH-0031\"],\"mfa_enabled\":false,\"account_locked\":false}',"
+      },
+      {
+        "name": "tools",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:51.864Z",
+        "endTime": "2026-07-29T12:38:52.654Z",
+        "usage": {},
+        "input": "{'__type': 'tool_call_with_context', 'tool_call': {'name': 'list_tickets', 'args': {'employee_id': 'E1002', 'status': 'open'}, 'id': 'call_7909b6e782fa47218595e30e', 'type': 'tool_call'}, 'state': {'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'addition",
+        "output": "{'messages': [{'content': [{'type': 'text', 'text': '[{\"ticket_id\":\"T-2044\",\"employee_id\":\"E1002\",\"status\":\"open\",\"category\":\"hardware\",\"summary\":\"Ноутбук NB-2210 не бачить док-станцію\",\"opened\":\"2026-07-28\"}]', 'id': 'lc_ed0e91e3-9638-4502-a217-1777f0502567'}], 'additional_kwargs': {}, 'response_me"
+      },
+      {
+        "name": "list_tickets",
+        "type": "TOOL",
+        "startTime": "2026-07-29T12:38:51.867Z",
+        "endTime": "2026-07-29T12:38:52.653Z",
+        "usage": {},
+        "input": "{'employee_id': 'E1002', 'status': 'open'}",
+        "output": "[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2044\",\"employee_id\":\"E1002\",\"status\":\"open\",\"category\":\"hardware\",\"summary\":\"Ноутбук NB-2210 не бачить док-станцію\",\"opened\":\"2026-07-28\"}]', 'id': 'lc_ed0e91e3-9638-4502-a217-1777f0502567'}]"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:46.799Z",
+        "endTime": "2026-07-29T12:38:51.861Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'remaining_steps': 39}",
+        "output": "{'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 199, 'prompt_tokens': 547, 'total_tokens': 746, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 99, 'rejected_prediction_tokens'"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T12:38:46.799Z",
+        "endTime": "2026-07-29T12:38:51.858Z",
+        "usage": {
+          "input": 547,
+          "output": 100,
+          "total": 746,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 99
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи агент каталогу. Знаходь картку співробітника (lookup_employee) та його заявки\\n(list_tickets). Табельний номер має формат E1001. Не пропонуй незв",
+        "output": "{'role': 'assistant', 'content': '', 'tool_calls': [{'name': 'lookup_employee', 'args': {'employee_id': 'E1002'}, 'id': 'call_205b443a5286447fbac46718', 'type': 'tool_call'}, {'name': 'list_tickets', 'args': {'employee_id': 'E1002', 'status': 'open'}, 'id': 'call_7909b6e782fa47218595e30e', 'type': '"
+      },
+      {
+        "name": "should_continue",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:51.862Z",
+        "endTime": "2026-07-29T12:38:51.863Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}, {'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {",
+        "output": "[{'node': 'tools', 'arg': {'__type': 'tool_call_with_context', 'tool_call': {'name': 'lookup_employee', 'args': {'employee_id': 'E1002'}, 'id': 'call_205b443a5286447fbac46718', 'type': 'tool_call'}, 'state': {'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?'"
+      },
+      {
+        "name": "agent",
+        "type": "AGENT",
+        "startTime": "2026-07-29T12:38:46.798Z",
+        "endTime": "2026-07-29T12:38:51.863Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'remaining_steps': 39}",
+        "output": "{'messages': [{'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 199, 'prompt_tokens': 547, 'total_tokens': 746, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 99, 'rejected_pred"
+      },
+      {
+        "name": "call_model",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:46.798Z",
+        "endTime": "2026-07-29T12:38:51.861Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'remaining_steps': 39}",
+        "output": "{'messages': [{'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 199, 'prompt_tokens': 547, 'total_tokens': 746, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 99, 'rejected_pred"
+      },
+      {
+        "name": "supervisor",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:44.822Z",
+        "endTime": "2026-07-29T12:38:46.796Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'route': '', 'handoffs': [], 'blocked': None, 'answer': None, 'pii_redacted':",
+        "output": "{'route': 'directory_agent', 'handoffs': ['directory_agent']}"
+      },
+      {
+        "name": "Prompt",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:46.799Z",
+        "endTime": "2026-07-29T12:38:46.799Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'remaining_steps': 39}",
+        "output": "[{'content': 'Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи агент каталогу. Знаходь картку співробітника (lookup_employee) та його заявки\\n(list_tickets). Табельний номер має формат E1001. Не пропонуй незворотних дій.', 'ad"
+      },
+      {
+        "name": "<unknown>",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:46.794Z",
+        "endTime": "2026-07-29T12:38:46.795Z",
+        "usage": {},
+        "input": "{'route': 'directory_agent', 'handoffs': ['directory_agent'], 'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'blocked': None,",
+        "output": "directory_agent"
+      },
+      {
+        "name": "<unknown>",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:44.821Z",
+        "endTime": "2026-07-29T12:38:44.821Z",
+        "usage": {},
+        "input": "{'blocked': None, 'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'route': '', 'handoffs': [], 'answer': None, 'pii_redacted':",
+        "output": "supervisor"
+      },
+      {
+        "name": "input_guard",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:44.820Z",
+        "endTime": "2026-07-29T12:38:44.821Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Хто такий E1002, які в нього відкриті заявки і чи ввімкнена MFA?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': 'c8ffbe09-6f60-4c17-b33c-f5a754d16b76'}], 'route': '', 'handoffs': [], 'blocked': None, 'answer': None, 'pii_redacted':",
+        "output": "{'blocked': None}"
+      },
+      {
+        "name": "PydanticToolsParser",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:46.791Z",
+        "endTime": "2026-07-29T12:38:46.792Z",
+        "usage": {},
+        "input": "{'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 61, 'prompt_tokens': 689, 'total_tokens': 750, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': ",
+        "output": "{'next': 'directory_agent', 'reason': 'Потрібно знайти співробітника за кодом E1002, його відкриті заявки та статус MFA.'}"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T12:38:44.823Z",
+        "endTime": "2026-07-29T12:38:46.793Z",
+        "usage": {},
+        "input": "[{'content': \"Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи координатор. Обирай, який агент працює наступним, або FINISH, коли даних достатньо.\\n\\n- kb_agent — інструкції та політики з бази знань (search_kb)\\n- directory_ag",
+        "output": "{'next': 'directory_agent', 'reason': 'Потрібно знайти співробітника за кодом E1002, його відкриті заявки та статус MFA.'}"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T12:38:44.824Z",
+        "endTime": "2026-07-29T12:38:46.790Z",
+        "usage": {
+          "input": 689,
+          "output": 61,
+          "total": 750,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 0
+        },
+        "input": "[{'role': 'system', 'content': \"Nexora IT Desk — служба підтримки ІТ середньої компанії. Працюємо українською, спираємось лише на дані з інструментів.\\nТи координатор. Обирай, який агент працює наступним, або FINISH, коли даних достатньо.\\n\\n- kb_agent — інструкції та політики з бази знань (search_k",
+        "output": "{'role': 'assistant', 'content': '', 'tool_calls': [{'name': 'Routing', 'args': {'next': 'directory_agent', 'reason': 'Потрібно знайти співробітника за кодом E1002, його відкриті заявки та статус MFA.'}, 'id': 'call-c70e5123-0dcc-4241-8e60-bccf1037bb25', 'type': 'tool_call'}], 'additional_kwargs': {"
+      }
+    ],
+    "htmlPath": "/project/nexora-helpdesk/traces/6d38f74dbeae5470ef66f4d2455b0bae",
+    "totalCost": 0
+  }
+]

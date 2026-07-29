@@ -1,0 +1,1305 @@
+{
+  "runs": {
+    "langgraph-0": {
+      "usage": {
+        "llm_calls": 8,
+        "tool_calls": 6,
+        "input_tokens": 9017,
+        "output_tokens": 1979,
+        "seconds": 75.97
+      },
+      "spans": [
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade1-428f-7c32-9e25-33031d21a9fa",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "input_guard",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 0.002
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-4292-73b3-8be0-14cf62428133",
+          "duration_s": 3.782,
+          "tokens": {
+            "input": 686,
+            "output": 73
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade1-4292-73b3-8be0-14cf62428133",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-4291-7630-b15d-c4b0bcf18d0c",
+          "duration_s": 3.785
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade1-4291-7630-b15d-c4b0bcf18d0c",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 3.787
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fade1-5161-7db1-91f5-be0fc9758cc2",
+          "duration_s": -0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-5161-7db1-91f5-be0fc9758cc2",
+          "duration_s": 4.691,
+          "tokens": {
+            "input": 459,
+            "output": 147
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-5160-76e3-932c-cf2f88eec516",
+          "duration_s": 4.697
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fade1-5160-76e3-932c-cf2f88eec516",
+          "duration_s": 4.697
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fade1-5160-76e3-932c-cf2f88eec516",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fade1-515e-7d61-9dfc-f2f217bba023",
+          "duration_s": 4.7
+        },
+        {
+          "span": "tool",
+          "name": "search_kb",
+          "parent": "019fade1-63be-7ad1-943a-b4233e8f0cbe",
+          "duration_s": 0.663,
+          "output": "[{'type': 'text', 'text': '[{\"article_id\":\"KB-01\",\"title\":\"Розблокування облікового запису після невдалих входів\",\"tags\":[\"пароль\",\"блокування\",\"вхід\",\"обліковий запис\",\"access\"],\"body\":\"Обліковий зап"
+        },
+        {
+          "span": "tool",
+          "name": "search_kb",
+          "parent": "019fade1-63bd-7b33-ab69-868ad7a3e80e",
+          "duration_s": 0.665,
+          "output": "content=[{'type': 'text', 'text': '[{\"article_id\":\"KB-01\",\"title\":\"Розблокування облікового запису після невдалих входів\",\"tags\":[\"пароль\",\"блокування\",\"вхід\",\"обліковий запис\",\"access\"],\"body\":\"Облік"
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019fade1-515e-7d61-9dfc-f2f217bba023",
+          "duration_s": 0.665
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fade1-6659-71e3-a2fc-b4328d7a1c20",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-6659-71e3-a2fc-b4328d7a1c20",
+          "duration_s": 7.842,
+          "tokens": {
+            "input": 683,
+            "output": 278
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-6658-76b2-98f6-51dccac35c44",
+          "duration_s": 7.844
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fade1-6658-76b2-98f6-51dccac35c44",
+          "duration_s": 7.846
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fade1-6658-76b2-98f6-51dccac35c44",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fade1-515e-7d61-9dfc-f2f217bba023",
+          "duration_s": 7.848
+        },
+        {
+          "span": "chain",
+          "name": "kb_agent",
+          "parent": "019fade1-515e-7d61-9dfc-f2eb0d5131ca",
+          "duration_s": 13.22
+        },
+        {
+          "span": "chain",
+          "name": "kb_agent",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 13.221
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-8504-7fe3-8cf6-c6809c4681a7",
+          "duration_s": 6.536,
+          "tokens": {
+            "input": 1135,
+            "output": 70
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade1-8504-7fe3-8cf6-c6809c4681a7",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-8503-7622-ac2c-dd7ad056bf8f",
+          "duration_s": 6.54
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade1-8503-7622-ac2c-dd7ad056bf8f",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 6.541
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fade1-9e95-7561-a312-e25d0fec4609",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-9e95-7561-a312-e25d0fec4609",
+          "duration_s": 4.704,
+          "tokens": {
+            "input": 996,
+            "output": 169
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-9e94-7f12-a2b1-fd4320ed39eb",
+          "duration_s": 4.707
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fade1-9e94-7f12-a2b1-fd4320ed39eb",
+          "duration_s": 4.709
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fade1-9e94-7f12-a2b1-fd4320ed39eb",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fade1-9e93-7612-954b-66065a38499b",
+          "duration_s": 4.712
+        },
+        {
+          "span": "tool",
+          "name": "list_tickets",
+          "parent": "019fade1-b0ff-76e2-98af-959df227bf0c",
+          "duration_s": 0.891,
+          "output": "[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2041\",\"employee_id\":\"E1001\",\"status\":\"open\",\"category\":\"access\",\"summary\":\"Обліковий запис заблоковано після 5 невдалих спроб входу\",\"opened\":\"2026-07-27\"}]"
+        },
+        {
+          "span": "tool",
+          "name": "lookup_employee",
+          "parent": "019fade1-b0ff-76e2-98af-958f01d9b51b",
+          "duration_s": 0.892,
+          "output": "[{'type': 'text', 'text': '{\"employee_id\":\"E1001\",\"name\":\"Олена Ковальчук\",\"email\":\"olena.kovalchuk@nexora.ua\",\"phone\":\"+380 (67) 123-45-67\",\"department\":\"Фінанси\",\"role\":\"Головний бухгалтер\",\"manager"
+        },
+        {
+          "span": "tool",
+          "name": "list_tickets",
+          "parent": "019fade1-b0fe-7bd1-98bf-b7aa4711aee5",
+          "duration_s": 0.894,
+          "output": "content=[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2041\",\"employee_id\":\"E1001\",\"status\":\"open\",\"category\":\"access\",\"summary\":\"Обліковий запис заблоковано після 5 невдалих спроб входу\",\"opened\":\"2026-"
+        },
+        {
+          "span": "tool",
+          "name": "lookup_employee",
+          "parent": "019fade1-b0fe-7bd1-98bf-b79beab3ae7f",
+          "duration_s": 0.894,
+          "output": "content=[{'type': 'text', 'text': '{\"employee_id\":\"E1001\",\"name\":\"Олена Ковальчук\",\"email\":\"olena.kovalchuk@nexora.ua\",\"phone\":\"+380 (67) 123-45-67\",\"department\":\"Фінанси\",\"role\":\"Головний бухгалтер\","
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019fade1-9e93-7612-954b-66065a38499b",
+          "duration_s": 0.897
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019fade1-9e93-7612-954b-66065a38499b",
+          "duration_s": 0.897
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fade1-b481-74d1-a2af-1a0f20a3c35d",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-b481-74d1-a2af-1a0f20a3c35d",
+          "duration_s": 15.682,
+          "tokens": {
+            "input": 1307,
+            "output": 662
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-b480-7cc0-a67b-3e07f427c92f",
+          "duration_s": 15.687
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fade1-b480-7cc0-a67b-3e07f427c92f",
+          "duration_s": 15.687
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fade1-b480-7cc0-a67b-3e07f427c92f",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fade1-9e93-7612-954b-66065a38499b",
+          "duration_s": 15.69
+        },
+        {
+          "span": "chain",
+          "name": "directory_agent",
+          "parent": "019fade1-9e92-7a03-9618-68912ae0d7ec",
+          "duration_s": 21.308
+        },
+        {
+          "span": "chain",
+          "name": "directory_agent",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 21.309
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade1-f1d2-72a1-b5d8-056e044fe999",
+          "duration_s": 4.009,
+          "tokens": {
+            "input": 1926,
+            "output": 144
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade1-f1d2-72a1-b5d8-056e044fe999",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade1-f1d1-7c93-a791-225d3fa6b8ce",
+          "duration_s": 4.011
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade1-f1d1-7c93-a791-225d3fa6b8ce",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 4.014
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade2-0180-74e1-b6ee-fd95e33eac2e",
+          "duration_s": 27.076,
+          "tokens": {
+            "input": 1825,
+            "output": 436
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade2-0180-74e1-b6ee-fd95e33eac2e",
+          "duration_s": -0.0
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade2-017f-7b30-9d67-901e578047a6",
+          "duration_s": 27.083
+        },
+        {
+          "span": "chain",
+          "name": "respond",
+          "parent": "019fade1-428a-72f2-a063-5f6440d5ab5f",
+          "duration_s": 27.086
+        },
+        {
+          "span": "chain",
+          "name": "LangGraph",
+          "parent": null,
+          "duration_s": 75.974
+        }
+      ]
+    },
+    "langgraph-1": {
+      "usage": {
+        "llm_calls": 5,
+        "tool_calls": 4,
+        "input_tokens": 4563,
+        "output_tokens": 1073,
+        "seconds": 56.52
+      },
+      "spans": [
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade2-6b54-70e0-8481-88fa259657a0",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "input_guard",
+          "parent": "019fade2-6b53-7211-be0e-196815b7d9ad",
+          "duration_s": 0.002
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade2-6b56-7ef2-ad26-5607b24c34fc",
+          "duration_s": 1.965,
+          "tokens": {
+            "input": 689,
+            "output": 61
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade2-6b56-7ef2-ad26-5607b24c34fc",
+          "duration_s": 0.002
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade2-6b56-7ef2-ad26-55f6c190773d",
+          "duration_s": 1.97
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade2-6b56-7ef2-ad26-55f6c190773d",
+          "duration_s": 0.002
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fade2-6b53-7211-be0e-196815b7d9ad",
+          "duration_s": 1.974
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fade2-730f-7822-acfe-4c9af42ac270",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade2-730f-7822-acfe-4c9af42ac270",
+          "duration_s": 5.058,
+          "tokens": {
+            "input": 547,
+            "output": 199
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade2-730e-7992-a98e-1927628dc835",
+          "duration_s": 5.062
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fade2-730e-7992-a98e-1927628dc835",
+          "duration_s": 5.063
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fade2-730e-7992-a98e-1927628dc835",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fade2-730d-7df3-af05-a32496c67530",
+          "duration_s": 5.066
+        },
+        {
+          "span": "tool",
+          "name": "list_tickets",
+          "parent": "019fade2-86d9-7612-bdfd-5e9ff29d51c7",
+          "duration_s": 0.787,
+          "output": "[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2044\",\"employee_id\":\"E1002\",\"status\":\"open\",\"category\":\"hardware\",\"summary\":\"Ноутбук NB-2210 не бачить док-станцію\",\"opened\":\"2026-07-28\"}]', 'id': 'lc_ed0e"
+        },
+        {
+          "span": "tool",
+          "name": "list_tickets",
+          "parent": "019fade2-86d8-7a20-86ec-0a7f48999afd",
+          "duration_s": 0.789,
+          "output": "content=[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2044\",\"employee_id\":\"E1002\",\"status\":\"open\",\"category\":\"hardware\",\"summary\":\"Ноутбук NB-2210 не бачить док-станцію\",\"opened\":\"2026-07-28\"}]', 'id': "
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019fade2-730d-7df3-af05-a32496c67530",
+          "duration_s": 0.79
+        },
+        {
+          "span": "tool",
+          "name": "lookup_employee",
+          "parent": "019fade2-86d9-7612-bdfd-5ea754500d56",
+          "duration_s": 0.789,
+          "output": "[{'type': 'text', 'text': '{\"employee_id\":\"E1002\",\"name\":\"Ігор Дідух\",\"email\":\"ihor.didukh@nexora.ua\",\"phone\":\"+380 (50) 987-65-43\",\"department\":\"Логістика\",\"role\":\"Диспетчер\",\"manager_id\":\"E1003\",\"de"
+        },
+        {
+          "span": "tool",
+          "name": "lookup_employee",
+          "parent": "019fade2-86d8-7a20-86ec-0a69768fa318",
+          "duration_s": 0.791,
+          "output": "content=[{'type': 'text', 'text': '{\"employee_id\":\"E1002\",\"name\":\"Ігор Дідух\",\"email\":\"ihor.didukh@nexora.ua\",\"phone\":\"+380 (50) 987-65-43\",\"department\":\"Логістика\",\"role\":\"Диспетчер\",\"manager_id\":\"E1"
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019fade2-730d-7df3-af05-a32496c67530",
+          "duration_s": 0.792
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fade2-89f2-7903-a6a9-8be039e19467",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade2-89f2-7903-a6a9-8be039e19467",
+          "duration_s": 11.084,
+          "tokens": {
+            "input": 815,
+            "output": 485
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade2-89f1-7f12-be59-e3a385ec1050",
+          "duration_s": 11.087
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fade2-89f1-7f12-be59-e3a385ec1050",
+          "duration_s": 11.089
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fade2-89f1-7f12-be59-e3a385ec1050",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fade2-730d-7df3-af05-a32496c67530",
+          "duration_s": 11.093
+        },
+        {
+          "span": "chain",
+          "name": "directory_agent",
+          "parent": "019fade2-730c-7621-99c6-28e9c234181d",
+          "duration_s": 16.959
+        },
+        {
+          "span": "chain",
+          "name": "directory_agent",
+          "parent": "019fade2-6b53-7211-be0e-196815b7d9ad",
+          "duration_s": 16.959
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade2-b54d-7720-b401-37ba71e601ce",
+          "duration_s": 4.396,
+          "tokens": {
+            "input": 1304,
+            "output": 124
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade2-b54d-7720-b401-37ba71e601ce",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade2-b54c-7153-8587-325c3dfdb464",
+          "duration_s": 4.403
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fade2-b54c-7153-8587-325c3dfdb464",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fade2-6b53-7211-be0e-196815b7d9ad",
+          "duration_s": 4.405
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fade2-c682-7361-8230-37f077d8626a",
+          "duration_s": 33.163,
+          "tokens": {
+            "input": 1208,
+            "output": 204
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fade2-c682-7361-8230-37f077d8626a",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fade2-c682-7361-8230-37e8d2b232b8",
+          "duration_s": 33.169
+        },
+        {
+          "span": "chain",
+          "name": "respond",
+          "parent": "019fade2-6b53-7211-be0e-196815b7d9ad",
+          "duration_s": 33.171
+        },
+        {
+          "span": "chain",
+          "name": "LangGraph",
+          "parent": null,
+          "duration_s": 56.515
+        }
+      ]
+    },
+    "langfuse-demo": {
+      "usage": {
+        "llm_calls": 5,
+        "tool_calls": 2,
+        "input_tokens": 4337,
+        "output_tokens": 1366,
+        "seconds": 113.92
+      },
+      "spans": [
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fadcc-3a25-79d3-adff-0353d9563bbd",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "input_guard",
+          "parent": "019fadcc-3a22-7e30-828a-5b455130d1a9",
+          "duration_s": 0.003
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fadcc-3a2a-75d3-bc81-836072a326f6",
+          "duration_s": 21.196,
+          "tokens": {
+            "input": 677,
+            "output": 106
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fadcc-3a2a-75d3-bc81-836072a326f6",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fadcc-3a2a-75d3-bc81-8359cd00b0e8",
+          "duration_s": 21.201
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fadcc-3a2a-75d3-bc81-8359cd00b0e8",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fadcc-3a22-7e30-828a-5b455130d1a9",
+          "duration_s": 21.204
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fadcc-8d02-7f20-a6cb-c8ed5710880a",
+          "duration_s": -0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fadcc-8d02-7f20-a6cb-c8ed5710880a",
+          "duration_s": 10.28,
+          "tokens": {
+            "input": 446,
+            "output": 142
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fadcc-8d01-7841-9382-aa31c44f8b76",
+          "duration_s": 10.283
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fadcc-8d01-7841-9382-aa31c44f8b76",
+          "duration_s": 10.285
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fadcc-8d01-7841-9382-aa31c44f8b76",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fadcc-8d00-7700-9261-ce4f27ab9ba7",
+          "duration_s": 10.288
+        },
+        {
+          "span": "tool",
+          "name": "search_kb",
+          "parent": "019fadcc-b533-7411-bb28-d41576eb4f9b",
+          "duration_s": 0.788,
+          "output": "[{'type': 'text', 'text': '[{\"article_id\":\"KB-03\",\"title\":\"VPN не підключається\",\"tags\":[\"vpn\",\"мережа\",\"підключення\"],\"body\":\"Перевір годинник пристрою, перевстанови профіль, потім перевір MFA. Якщо "
+        },
+        {
+          "span": "tool",
+          "name": "search_kb",
+          "parent": "019fadcc-b532-7e11-8042-e1e4b0d1f819",
+          "duration_s": 0.79,
+          "output": "content=[{'type': 'text', 'text': '[{\"article_id\":\"KB-03\",\"title\":\"VPN не підключається\",\"tags\":[\"vpn\",\"мережа\",\"підключення\"],\"body\":\"Перевір годинник пристрою, перевстанови профіль, потім перевір MF"
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019fadcc-8d00-7700-9261-ce4f27ab9ba7",
+          "duration_s": 0.791
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019fadcc-b84c-7981-876a-8ce8e45c1fba",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fadcc-b84c-7981-876a-8ce8e45c1fba",
+          "duration_s": 8.218,
+          "tokens": {
+            "input": 720,
+            "output": 595
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fadcc-b84b-7c23-91f4-51ecd0a43096",
+          "duration_s": 8.221
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019fadcc-b84b-7c23-91f4-51ecd0a43096",
+          "duration_s": 8.222
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019fadcc-b84b-7c23-91f4-51ecd0a43096",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019fadcc-8d00-7700-9261-ce4f27ab9ba7",
+          "duration_s": 8.224
+        },
+        {
+          "span": "chain",
+          "name": "kb_agent",
+          "parent": "019fadcc-8cff-7612-9eed-c1dfecc92c9a",
+          "duration_s": 19.309
+        },
+        {
+          "span": "chain",
+          "name": "kb_agent",
+          "parent": "019fadcc-3a22-7e30-828a-5b455130d1a9",
+          "duration_s": 19.31
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fadcc-d86f-7761-a86d-5a62cffa08b2",
+          "duration_s": 26.846,
+          "tokens": {
+            "input": 1297,
+            "output": 132
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fadcc-d86f-7761-a86d-5a62cffa08b2",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fadcc-d86e-71e1-bfd7-548f65eefcd2",
+          "duration_s": 26.854
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019fadcc-d86e-71e1-bfd7-548f65eefcd2",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019fadcc-3a22-7e30-828a-5b455130d1a9",
+          "duration_s": 26.856
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fadcd-4158-7a42-9edc-f55ee45d12b6",
+          "duration_s": 46.529,
+          "tokens": {
+            "input": 1197,
+            "output": 391
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fadcd-4158-7a42-9edc-f55ee45d12b6",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fadcd-4158-7a42-9edc-f54eda1e824c",
+          "duration_s": 46.534
+        },
+        {
+          "span": "chain",
+          "name": "respond",
+          "parent": "019fadcc-3a22-7e30-828a-5b455130d1a9",
+          "duration_s": 46.536
+        },
+        {
+          "span": "chain",
+          "name": "LangGraph",
+          "parent": null,
+          "duration_s": 113.919
+        }
+      ]
+    },
+    "compare-langgraph": {
+      "usage": {
+        "llm_calls": 8,
+        "tool_calls": 6,
+        "input_tokens": 8936,
+        "output_tokens": 1787,
+        "seconds": 173.93
+      },
+      "spans": [
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019faddc-8242-7100-9647-7679fdb7b26d",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "input_guard",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 0.002
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddc-8245-7d21-894f-9b35c21444cf",
+          "duration_s": 3.704,
+          "tokens": {
+            "input": 686,
+            "output": 70
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019faddc-8245-7d21-894f-9b35c21444cf",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddc-8244-7b21-9187-96cf2f2ecb3c",
+          "duration_s": 3.709
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019faddc-8244-7b21-9187-96cf2f2ecb3c",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 3.713
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019faddc-90c8-7701-abad-0b975d18ce5e",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddc-90c8-7701-abad-0b975d18ce5e",
+          "duration_s": 6.967,
+          "tokens": {
+            "input": 459,
+            "output": 147
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddc-90c8-7701-abad-0b7929d15f01",
+          "duration_s": 6.97
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019faddc-90c8-7701-abad-0b7929d15f01",
+          "duration_s": 6.971
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019faddc-90c8-7701-abad-0b7929d15f01",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019faddc-90c6-7142-8635-8881b5967189",
+          "duration_s": 6.973
+        },
+        {
+          "span": "tool",
+          "name": "search_kb",
+          "parent": "019faddc-ac07-73c2-9c32-48af20d5490e",
+          "duration_s": 0.776,
+          "output": "[{'type': 'text', 'text': '[{\"article_id\":\"KB-01\",\"title\":\"Розблокування облікового запису після невдалих входів\",\"tags\":[\"пароль\",\"блокування\",\"вхід\",\"обліковий запис\",\"access\"],\"body\":\"Обліковий зап"
+        },
+        {
+          "span": "tool",
+          "name": "search_kb",
+          "parent": "019faddc-ac06-72f0-a58f-ba18c3c9c339",
+          "duration_s": 0.778,
+          "output": "content=[{'type': 'text', 'text': '[{\"article_id\":\"KB-01\",\"title\":\"Розблокування облікового запису після невдалих входів\",\"tags\":[\"пароль\",\"блокування\",\"вхід\",\"обліковий запис\",\"access\"],\"body\":\"Облік"
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019faddc-90c6-7142-8635-8881b5967189",
+          "duration_s": 0.78
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019faddc-af13-78a1-9a13-14fdf5cf6ea2",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddc-af13-78a1-9a13-14fdf5cf6ea2",
+          "duration_s": 13.469,
+          "tokens": {
+            "input": 683,
+            "output": 267
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddc-af12-7693-b9d7-776e7286c407",
+          "duration_s": 13.473
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019faddc-af12-7693-b9d7-776e7286c407",
+          "duration_s": 13.474
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019faddc-af12-7693-b9d7-776e7286c407",
+          "duration_s": 0.003
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019faddc-90c6-7142-8635-8881b5967189",
+          "duration_s": 13.481
+        },
+        {
+          "span": "chain",
+          "name": "kb_agent",
+          "parent": "019faddc-90c6-7142-8635-887a855d0e29",
+          "duration_s": 21.242
+        },
+        {
+          "span": "chain",
+          "name": "kb_agent",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 21.243
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddc-e3c3-7b60-9fcc-3f7e203bbede",
+          "duration_s": 2.474,
+          "tokens": {
+            "input": 1126,
+            "output": 76
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019faddc-e3c3-7b60-9fcc-3f7e203bbede",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddc-e3c2-7ca1-a596-a6c101dffb63",
+          "duration_s": 2.478
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019faddc-e3c2-7ca1-a596-a6c101dffb63",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 2.486
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019faddc-ed7f-7a10-a697-c5930dfa4e7c",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddc-ed7f-7a10-a697-c5930dfa4e7c",
+          "duration_s": 7.092,
+          "tokens": {
+            "input": 985,
+            "output": 146
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddc-ed7c-7f50-9b38-e91e48934c38",
+          "duration_s": 7.094
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019faddc-ed7c-7f50-9b38-e91e48934c38",
+          "duration_s": 7.099
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019faddc-ed7c-7f50-9b38-e91e48934c38",
+          "duration_s": -0.0
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019faddc-ed7a-7de1-955b-279dca06215c",
+          "duration_s": 7.102
+        },
+        {
+          "span": "tool",
+          "name": "list_tickets",
+          "parent": "019faddd-093f-78f2-bdd8-8e181accded8",
+          "duration_s": 0.814,
+          "output": "[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2041\",\"employee_id\":\"E1001\",\"status\":\"open\",\"category\":\"access\",\"summary\":\"Обліковий запис заблоковано після 5 невдалих спроб входу\",\"opened\":\"2026-07-27\"}]"
+        },
+        {
+          "span": "tool",
+          "name": "list_tickets",
+          "parent": "019faddd-093c-7e53-bdbf-fd0aff5996fa",
+          "duration_s": 0.817,
+          "output": "content=[{'type': 'text', 'text': '[{\"ticket_id\":\"T-2041\",\"employee_id\":\"E1001\",\"status\":\"open\",\"category\":\"access\",\"summary\":\"Обліковий запис заблоковано після 5 невдалих спроб входу\",\"opened\":\"2026-"
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019faddc-ed7a-7de1-955b-279dca06215c",
+          "duration_s": 0.819
+        },
+        {
+          "span": "tool",
+          "name": "lookup_employee",
+          "parent": "019faddd-093e-7d02-a45c-80b70c591d55",
+          "duration_s": 0.824,
+          "output": "[{'type': 'text', 'text': '{\"employee_id\":\"E1001\",\"name\":\"Олена Ковальчук\",\"email\":\"olena.kovalchuk@nexora.ua\",\"phone\":\"+380 (67) 123-45-67\",\"department\":\"Фінанси\",\"role\":\"Головний бухгалтер\",\"manager"
+        },
+        {
+          "span": "tool",
+          "name": "lookup_employee",
+          "parent": "019faddd-093c-7e53-bdbf-fcfab95c4e6e",
+          "duration_s": 0.828,
+          "output": "content=[{'type': 'text', 'text': '{\"employee_id\":\"E1001\",\"name\":\"Олена Ковальчук\",\"email\":\"olena.kovalchuk@nexora.ua\",\"phone\":\"+380 (67) 123-45-67\",\"department\":\"Фінанси\",\"role\":\"Головний бухгалтер\","
+        },
+        {
+          "span": "chain",
+          "name": "tools",
+          "parent": "019faddc-ed7a-7de1-955b-279dca06215c",
+          "duration_s": 0.829
+        },
+        {
+          "span": "chain",
+          "name": "Prompt",
+          "parent": "019faddd-0c7d-7263-b3a8-50b43a43e876",
+          "duration_s": 0.0
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddd-0c7d-7263-b3a8-50b43a43e876",
+          "duration_s": 14.754,
+          "tokens": {
+            "input": 1261,
+            "output": 584
+          }
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddd-0c7b-7840-92b4-e3d182c9b331",
+          "duration_s": 14.757
+        },
+        {
+          "span": "chain",
+          "name": "call_model",
+          "parent": "019faddd-0c7b-7840-92b4-e3d182c9b331",
+          "duration_s": 14.757
+        },
+        {
+          "span": "chain",
+          "name": "should_continue",
+          "parent": "019faddd-0c7b-7840-92b4-e3d182c9b331",
+          "duration_s": 0.0
+        },
+        {
+          "span": "chain",
+          "name": "agent",
+          "parent": "019faddc-ed7a-7de1-955b-279dca06215c",
+          "duration_s": 14.761
+        },
+        {
+          "span": "chain",
+          "name": "directory_agent",
+          "parent": "019faddc-ed79-75c1-93cf-08c0619b6d13",
+          "duration_s": 22.704
+        },
+        {
+          "span": "chain",
+          "name": "directory_agent",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 22.706
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019faddd-462d-77c1-a873-04f0e8580ae9",
+          "duration_s": 50.941,
+          "tokens": {
+            "input": 1919,
+            "output": 204
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019faddd-462d-77c1-a873-04f0e8580ae9",
+          "duration_s": 0.002
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019faddd-462c-7d21-946a-e3aa8a836f61",
+          "duration_s": 50.949
+        },
+        {
+          "span": "chain",
+          "name": "chain",
+          "parent": "019faddd-462c-7d21-946a-e3aa8a836f61",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "supervisor",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 50.952
+        },
+        {
+          "span": "llm",
+          "name": "ChatOpenAI",
+          "parent": "019fadde-0d39-76e3-b6cf-ab3ce18c9078",
+          "duration_s": 72.8,
+          "tokens": {
+            "input": 1817,
+            "output": 293
+          }
+        },
+        {
+          "span": "chain",
+          "name": "PydanticToolsParser",
+          "parent": "019fadde-0d39-76e3-b6cf-ab3ce18c9078",
+          "duration_s": 0.001
+        },
+        {
+          "span": "chain",
+          "name": "RunnableSequence",
+          "parent": "019fadde-0d38-7652-80e7-fbedd402f554",
+          "duration_s": 72.806
+        },
+        {
+          "span": "chain",
+          "name": "respond",
+          "parent": "019faddc-823d-7d53-80fe-b7996eceea58",
+          "duration_s": 72.809
+        },
+        {
+          "span": "chain",
+          "name": "LangGraph",
+          "parent": null,
+          "duration_s": 173.93
+        }
+      ]
+    }
+  },
+  "langfuse": "увімкнено"
+}
