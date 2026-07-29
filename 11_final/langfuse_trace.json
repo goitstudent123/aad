@@ -1,0 +1,427 @@
+[
+  {
+    "id": "bbe26938cbcac0c03412f07698dcc3e9",
+    "projectId": "nexora-support",
+    "name": "LangGraph",
+    "timestamp": "2026-07-29T15:24:47.464Z",
+    "environment": "default",
+    "tags": [],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": null,
+    "sessionId": null,
+    "public": false,
+    "input": {
+      "messages": [
+        {
+          "content": "Які правила повернення коштів за невикористаний період?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": null
+        }
+      ],
+      "current_agent": "",
+      "plan": [],
+      "current_step": 0,
+      "results": [],
+      "step_count": 0,
+      "plan_iterations": 0,
+      "trajectory": [],
+      "completed": false,
+      "pending_approval": false,
+      "handoffs": [],
+      "session_id": "demo-researcher",
+      "blocked": null,
+      "answer": null,
+      "pii_redacted": []
+    },
+    "output": {
+      "messages": [
+        {
+          "content": "Які правила повернення коштів за невикористаний період?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "6fea5190-4983-4f4b-8bf5-e0d0902e722c"
+        },
+        {
+          "content": "Ось правила повернення коштів за невикористаний період в **Nexora**:\n\n### 🧮 Як розраховується сума повернення\nСума повернення рахується **пропорційно повним дням**:\n- Місячна абонплата ділиться на **30 днів**.\n- Потім множиться на **кількість невикористаних днів**.\n\n### ⏳ Термін подання заявки\nЗаявку на повернення можна подати протягом **30 днів** після закінчення оплаченого періоду.\n\n### 💳 Куди повертаються гроші\nКошти повертаються на **той самий спосіб оплати**, яким була внесена абонплата.\n\n### ⏱ Як довго чекати\nПовернення відбувається протягом **3–5 банківських днів** після підтвердження заявки білінг-агентом.\n\n### 📌 Важливо\n- Якщо ви ще в межах оплаченого періоду — після його завершення діє **пільговий період 3 доби без списання**, потім послуга призупиняється.\n- Дані зберігаються **90 днів**.\n\nЯкщо бажаєте подати заявку на повернення або маєте додаткові запитання — звертайтеся, буду рада допомогти! 😊",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "ai",
+          "name": "researcher",
+          "id": "51bc9f5b-bf5b-414c-91f1-f9f68ea1f24a",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": null
+        }
+      ],
+      "current_agent": "researcher",
+      "plan": [],
+      "current_step": 0,
+      "results": [
+        "researcher: Ось правила повернення коштів за невикористаний період в **Nexora**:\n\n### 🧮 Як розраховується сума повернення\nСума повернення рахується **пропорційно повним дням**:\n- Місячна абонплата ділиться на **30 днів**.\n- Потім множиться на **кількість невикористаних днів**.\n\n### ⏳ Термін подання заявки\nЗаявку на повернення можна подати протягом **30 днів** після закінчення оплаченого періоду.\n\n### 💳 Куди повертаються гроші\nКошти повертаються на **той самий спосіб оплати**, яким була внесена абонплата.\n\n### ⏱ Як довго чекати\nПовернення відбувається протягом **3–5 банківських днів** після підтвердження заявки білінг-агентом.\n\n### 📌 Важливо\n- Якщо ви ще в межах оплаченого періоду — після його завершення діє **пільговий період 3 доби без списання**, потім послуга призупиняється.\n- Дані зберігаються **90 днів**.\n\nЯкщо бажаєте подати заявку на повернення або маєте додаткові запитання — звертайтеся, буду рада допомогти! 😊"
+      ],
+      "step_count": 3,
+      "plan_iterations": 0,
+      "trajectory": [
+        {
+          "agent_name": "guard",
+          "node": "input",
+          "action": "Які правила повернення коштів за невикористаний період?",
+          "output": "чисто",
+          "tools": [],
+          "timestamp": 1785338687.464
+        },
+        {
+          "agent_name": "supervisor",
+          "node": "route",
+          "action": "Які правила повернення коштів за невикористаний період?",
+          "output": "→ researcher: Користувач запитує про правила повернення коштів — це довідкове питання, яке стосується політик і строків.",
+          "tools": [],
+          "timestamp": 1785338693.223
+        },
+        {
+          "agent_name": "researcher",
+          "node": "react",
+          "action": "query",
+          "output": "Які правила повернення коштів за невикористаний період?",
+          "tools": [],
+          "timestamp": 1785338737.133
+        },
+        {
+          "agent_name": "researcher",
+          "node": "react",
+          "action": "action",
+          "output": "search_knowledge({\"n_results\": 3, \"query\": \"правила повернення коштів за невикористаний період\"})",
+          "tools": [
+            "search_knowledge"
+          ],
+          "timestamp": 1785338737.133
+        },
+        {
+          "agent_name": "researcher",
+          "node": "react",
+          "action": "observation",
+          "output": "{\"status\": \"ok\", \"data\": {\"documents\": [\"Повернення коштів за невикористаний період рахується пропорційно повним дням: місячна абонплата ділиться на 30 і множиться на кількість невикористаних днів. Заявка приймається протягом 30 днів після кінця оплаченого періоду.\", \"Строк повернення коштів — 3-5 б",
+          "tools": [
+            "search_knowledge"
+          ],
+          "timestamp": 1785338737.133
+        },
+        {
+          "agent_name": "researcher",
+          "node": "react",
+          "action": "thought",
+          "output": "Ось правила повернення коштів за невикористаний період в **Nexora**:\n\n### 🧮 Як розраховується сума повернення\nСума повернення рахується **пропорційно повним дням**:\n- Місячна абонплата ділиться на **30 днів**.\n- Потім множиться на **кількість невикористаних днів**.\n\n### ⏳ Термін подання заявки\nЗаявк",
+          "tools": [],
+          "timestamp": 1785338737.133
+        },
+        {
+          "agent_name": "supervisor",
+          "node": "route",
+          "action": "finish",
+          "output": "researcher вже надав повну відповідь на питання користувача про правила повернення коштів. Додаткових тем у запиті немає, тому роботу завершено.",
+          "tools": [],
+          "timestamp": 1785338753.384
+        },
+        {
+          "agent_name": "respond",
+          "node": "answer",
+          "action": "final",
+          "output": "Повернення коштів за невикористаний період розраховується пропорційно повним дням: місячна абонплата ділиться на 30 днів і множиться на кількість невикористаних днів. Заявку можна подати протягом 30 днів після закінчення оплаченого періоду. Кошти повертаються на той самий спосіб оплати протягом 3–5 ",
+          "tools": [],
+          "timestamp": 1785338769.572
+        }
+      ],
+      "completed": true,
+      "pending_approval": false,
+      "handoffs": [
+        "researcher"
+      ],
+      "session_id": "demo-researcher",
+      "blocked": null,
+      "answer": {
+        "summary": "Повернення коштів за невикористаний період розраховується пропорційно повним дням: місячна абонплата ділиться на 30 днів і множиться на кількість невикористаних днів. Заявку можна подати протягом 30 днів після закінчення оплаченого періоду. Кошти повертаються на той самий спосіб оплати протягом 3–5 банківських днів після підтвердження заявки.",
+        "steps": [],
+        "actions": [],
+        "warnings": []
+      },
+      "pii_redacted": []
+    },
+    "metadata": {
+      "thread_id": "demo-researcher",
+      "ls_integration": "langgraph",
+      "is_langchain_root": true,
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.42.1",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "4.14.1",
+        "attributes": {
+          "public_key": "pk-lf-nexora-local"
+        }
+      }
+    },
+    "createdAt": "2026-07-29T15:24:49.435Z",
+    "updatedAt": "2026-07-29T15:26:09.892Z",
+    "externalId": null,
+    "scores": [],
+    "latency": 82.112,
+    "observations": [
+      {
+        "name": "PydanticToolsParser",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:26:09.568Z",
+        "endTime": "2026-07-29T15:26:09.570Z",
+        "usage": {},
+        "input": "{'content': '\\n\\n', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 185, 'prompt_tokens': 980, 'total_tokens': 1165, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tok",
+        "output": "{'summary': 'Повернення коштів за невикористаний період розраховується пропорційно повним дням: місячна абонплата ділиться на 30 днів і множиться на кількість невикористаних днів. Заявку можна подати протягом 30 днів після закінчення оплаченого періоду. Кошти повертаються на той самий спосіб оплати "
+      },
+      {
+        "name": "LangGraph",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:47.463Z",
+        "endTime": "2026-07-29T15:26:09.575Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': None}], 'current_agent': '', 'plan': [], 'current_step': 0, 'results': [], 'step_count': 0, 'plan_iterations': 0, 'trajectory': ",
+        "output": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}, {'content': 'Ось правила повернення коштів за невикористаний період в **Nexora**:\\n\\n##"
+      },
+      {
+        "name": "respond",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:25:53.386Z",
+        "endTime": "2026-07-29T15:26:09.572Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}, {'content': 'Ось правила повернення коштів за невикористаний період в **Nexora**:\\n\\n##",
+        "output": "{'answer': {'summary': 'Повернення коштів за невикористаний період розраховується пропорційно повним дням: місячна абонплата ділиться на 30 днів і множиться на кількість невикористаних днів. Заявку можна подати протягом 30 днів після закінчення оплаченого періоду. Кошти повертаються на той самий спо"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:25:53.387Z",
+        "endTime": "2026-07-29T15:26:09.571Z",
+        "usage": {},
+        "input": "[{'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nСклади фінальну відповідь користувачу з того, що зібрали агенти. Не додавай фактів від себе.\\nЯкщо ризикову дію відхилено або вона чекає підтвердженн",
+        "output": "{'summary': 'Повернення коштів за невикористаний період розраховується пропорційно повним дням: місячна абонплата ділиться на 30 днів і множиться на кількість невикористаних днів. Заявку можна подати протягом 30 днів після закінчення оплаченого періоду. Кошти повертаються на той самий спосіб оплати "
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T15:25:53.389Z",
+        "endTime": "2026-07-29T15:26:09.566Z",
+        "usage": {
+          "input": 980,
+          "output": 185,
+          "total": 1165,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 0
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nСклади фінальну відповідь користувачу з того, що зібрали агенти. Не додавай фактів від себе.\\nЯкщо ризикову дію відхилено або вона ",
+        "output": "{'role': 'assistant', 'content': '\\n\\n', 'tool_calls': [{'name': 'SupportAnswer', 'args': {'summary': 'Повернення коштів за невикористаний період розраховується пропорційно повним дням: місячна абонплата ділиться на 30 днів і множиться на кількість невикористаних днів. Заявку можна подати протягом 3"
+      },
+      {
+        "name": "PydanticToolsParser",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:25:53.382Z",
+        "endTime": "2026-07-29T15:25:53.383Z",
+        "usage": {},
+        "input": "{'content': '\\n\\n', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 124, 'prompt_tokens': 1314, 'total_tokens': 1438, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_to",
+        "output": "{'action': 'general', 'reasoning': 'researcher вже надав повну відповідь на питання користувача про правила повернення коштів. Додаткових тем у запиті немає, тому роботу завершено.', 'finished': True}"
+      },
+      {
+        "name": "route",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:25:53.384Z",
+        "endTime": "2026-07-29T15:25:53.384Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}, {'content': 'Ось правила повернення коштів за невикористаний період в **Nexora**:\\n\\n##",
+        "output": "respond"
+      },
+      {
+        "name": "supervisor",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:25:37.136Z",
+        "endTime": "2026-07-29T15:25:53.385Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}, {'content': 'Ось правила повернення коштів за невикористаний період в **Nexora**:\\n\\n##",
+        "output": "{'completed': True, 'trajectory': [{'agent_name': 'supervisor', 'node': 'route', 'action': 'finish', 'output': 'researcher вже надав повну відповідь на питання користувача про правила повернення коштів. Додаткових тем у запиті немає, тому роботу завершено.', 'tools': [], 'timestamp': 1785338753.384}"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:25:37.138Z",
+        "endTime": "2026-07-29T15:25:53.383Z",
+        "usage": {},
+        "input": "[{'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nТи супервізор. Обери агента, який працює наступним.\\n\\n- billing — платежі, списання, рахунки, тарифи, повернення коштів, закриття тікетів\\n- tech — ",
+        "output": "{'action': 'general', 'reasoning': 'researcher вже надав повну відповідь на питання користувача про правила повернення коштів. Додаткових тем у запиті немає, тому роботу завершено.', 'finished': True}"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T15:25:37.139Z",
+        "endTime": "2026-07-29T15:25:53.379Z",
+        "usage": {
+          "input": 1314,
+          "output": 124,
+          "total": 1438,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 0
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nТи супервізор. Обери агента, який працює наступним.\\n\\n- billing — платежі, списання, рахунки, тарифи, повернення коштів, закриття ",
+        "output": "{'role': 'assistant', 'content': '\\n\\n', 'tool_calls': [{'name': 'RouteDecision', 'args': {'action': 'general', 'reasoning': 'researcher вже надав повну відповідь на питання користувача про правила повернення коштів. Додаткових тем у запиті немає, тому роботу завершено.', 'finished': True}, 'id': 'c"
+      },
+      {
+        "name": "researcher",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:53.225Z",
+        "endTime": "2026-07-29T15:25:37.133Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}], 'current_agent': 'researcher', 'plan': [], 'current_step': 0, 'results': [], 'step_cou",
+        "output": "{'step_count': 3, 'results': ['researcher: Ось правила повернення коштів за невикористаний період в **Nexora**:\\n\\n### 🧮 Як розраховується сума повернення\\nСума повернення рахується **пропорційно повним дням**:\\n- Місячна абонплата ділиться на **30 днів**.\\n- Потім множиться на **кількість невикорис"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T15:25:32.395Z",
+        "endTime": "2026-07-29T15:25:37.131Z",
+        "usage": {
+          "input": 1043,
+          "output": 393,
+          "total": 1470,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 34
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nТи довідковий агент. Відповідаєш лише з бази знань: виклич search_knowledge і перекажи\\nзнайдене. Даних про конкретних клієнтів у т",
+        "output": "{'role': 'assistant', 'content': 'Ось правила повернення коштів за невикористаний період в **Nexora**:\\n\\n### 🧮 Як розраховується сума повернення\\nСума повернення рахується **пропорційно повним дням**:\\n- Місячна абонплата ділиться на **30 днів**.\\n- Потім множиться на **кількість невикористаних дні"
+      },
+      {
+        "name": "search_knowledge",
+        "type": "TOOL",
+        "startTime": "2026-07-29T15:24:55.439Z",
+        "endTime": "2026-07-29T15:25:32.389Z",
+        "usage": {},
+        "input": "{'query': 'правила повернення коштів за невикористаний період', 'n_results': 3}",
+        "output": "{'status': 'ok', 'data': {'documents': ['Повернення коштів за невикористаний період рахується пропорційно повним дням: місячна абонплата ділиться на 30 і множиться на кількість невикористаних днів. Заявка приймається протягом 30 днів після кінця оплаченого періоду.', 'Строк повернення коштів — 3-5 б"
+      },
+      {
+        "name": "search_knowledge",
+        "type": "TOOL",
+        "startTime": "2026-07-29T15:24:55.437Z",
+        "endTime": "2026-07-29T15:25:32.391Z",
+        "usage": {},
+        "input": "{'query': 'правила повернення коштів за невикористаний період', 'n_results': 3}",
+        "output": "{'status': 'ok', 'data': {'documents': ['Повернення коштів за невикористаний період рахується пропорційно повним дням: місячна абонплата ділиться на 30 і множиться на кількість невикористаних днів. Заявка приймається протягом 30 днів після кінця оплаченого періоду.', 'Строк повернення коштів — 3-5 б"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T15:24:53.230Z",
+        "endTime": "2026-07-29T15:24:55.436Z",
+        "usage": {
+          "input": 703,
+          "output": 81,
+          "total": 845,
+          "input_audio": 0,
+          "input_cache_read": 0,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 61
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nТи довідковий агент. Відповідаєш лише з бази знань: виклич search_knowledge і перекажи\\nзнайдене. Даних про конкретних клієнтів у т",
+        "output": "{'role': 'assistant', 'content': '', 'tool_calls': [{'name': 'search_knowledge', 'args': {'query': 'правила повернення коштів за невикористаний період', 'n_results': 3}, 'id': 'call_5dced35a90c9497ebc75d248', 'type': 'tool_call'}], 'additional_kwargs': {'refusal': None}}"
+      },
+      {
+        "name": "RunnableSequence",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:47.466Z",
+        "endTime": "2026-07-29T15:24:53.223Z",
+        "usage": {},
+        "input": "[{'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nТи супервізор. Обери агента, який працює наступним.\\n\\n- billing — платежі, списання, рахунки, тарифи, повернення коштів, закриття тікетів\\n- tech — ",
+        "output": "{'action': 'researcher', 'reasoning': 'Користувач запитує про правила повернення коштів — це довідкове питання, яке стосується політик і строків.', 'finished': True}"
+      },
+      {
+        "name": "supervisor",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:47.465Z",
+        "endTime": "2026-07-29T15:24:53.224Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}], 'current_agent': '', 'plan': [], 'current_step': 0, 'results': [], 'step_count': 0, 'p",
+        "output": "{'current_agent': 'researcher', 'completed': False, 'handoffs': ['researcher'], 'step_count': 1, 'trajectory': [{'agent_name': 'supervisor', 'node': 'route', 'action': 'Які правила повернення коштів за невикористаний період?', 'output': '→ researcher: Користувач запитує про правила повернення коштів"
+      },
+      {
+        "name": "ChatOpenAI",
+        "type": "GENERATION",
+        "startTime": "2026-07-29T15:24:47.467Z",
+        "endTime": "2026-07-29T15:24:53.220Z",
+        "usage": {
+          "input": 146,
+          "output": 64,
+          "total": 978,
+          "input_audio": 0,
+          "input_cache_read": 768,
+          "input_cache_creation": 0,
+          "output_audio": 0,
+          "output_reasoning": 0
+        },
+        "input": "[{'role': 'system', 'content': 'Nexora Support — служба підтримки телеком-оператора. Працюємо українською, спираємось лише на дані з інструментів, нічого не вигадуємо.\\nТи супервізор. Обери агента, який працює наступним.\\n\\n- billing — платежі, списання, рахунки, тарифи, повернення коштів, закриття ",
+        "output": "{'role': 'assistant', 'content': '', 'tool_calls': [{'name': 'RouteDecision', 'args': {'reasoning': 'Користувач запитує про правила повернення коштів — це довідкове питання, яке стосується політик і строків.', 'finished': True, 'action': 'researcher'}, 'id': 'call-18113120-379c-4f98-93e7-b9240ad539f"
+      },
+      {
+        "name": "PydanticToolsParser",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:53.222Z",
+        "endTime": "2026-07-29T15:24:53.222Z",
+        "usage": {},
+        "input": "{'content': '', 'additional_kwargs': {'refusal': None}, 'response_metadata': {'token_usage': {'completion_tokens': 64, 'prompt_tokens': 914, 'total_tokens': 978, 'completion_tokens_details': {'accepted_prediction_tokens': None, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': ",
+        "output": "{'action': 'researcher', 'reasoning': 'Користувач запитує про правила повернення коштів — це довідкове питання, яке стосується політик і строків.', 'finished': True}"
+      },
+      {
+        "name": "route",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:53.223Z",
+        "endTime": "2026-07-29T15:24:53.224Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}], 'current_agent': 'researcher', 'plan': [], 'current_step': 0, 'results': [], 'step_cou",
+        "output": "researcher"
+      },
+      {
+        "name": "<unknown>",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:47.464Z",
+        "endTime": "2026-07-29T15:24:47.465Z",
+        "usage": {},
+        "input": "{'blocked': None, 'handoffs': [], 'trajectory': [{'agent_name': 'guard', 'node': 'input', 'action': 'Які правила повернення коштів за невикористаний період?', 'output': 'чисто', 'tools': [], 'timestamp': 1785338687.464}], 'messages': [{'content': 'Які правила повернення коштів за невикористаний пері",
+        "output": "supervisor"
+      },
+      {
+        "name": "guard",
+        "type": "CHAIN",
+        "startTime": "2026-07-29T15:24:47.464Z",
+        "endTime": "2026-07-29T15:24:47.465Z",
+        "usage": {},
+        "input": "{'messages': [{'content': 'Які правила повернення коштів за невикористаний період?', 'additional_kwargs': {}, 'response_metadata': {}, 'type': 'human', 'name': None, 'id': '6fea5190-4983-4f4b-8bf5-e0d0902e722c'}], 'current_agent': '', 'plan': [], 'current_step': 0, 'results': [], 'step_count': 0, 'p",
+        "output": "{'blocked': None, 'handoffs': [], 'trajectory': [{'agent_name': 'guard', 'node': 'input', 'action': 'Які правила повернення коштів за невикористаний період?', 'output': 'чисто', 'tools': [], 'timestamp': 1785338687.464}]}"
+      }
+    ],
+    "htmlPath": "/project/nexora-support/traces/bbe26938cbcac0c03412f07698dcc3e9",
+    "totalCost": 0
+  }
+]
