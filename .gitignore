@@ -302,3 +302,6 @@ pip-selfcheck.json
 
 CLAUDE.md
 .claude/
+
+# ДЗ №4: локальний vector store ChromaDB (перегенерується з knowledge.py)
+chroma_db/
